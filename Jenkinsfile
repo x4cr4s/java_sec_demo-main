@@ -31,9 +31,9 @@ pipeline {
           sh 'mvn pmd:pmd pmd:cpd spotbugs:spotbugs'
         }
 
-        recordIssues enabledForFailure: true, tool: spotBugs()
-        recordIssues enabledForFailure: true, tool: cpd(pattern: '**/target/cpd.xml')
-        recordIssues enabledForFailure: true, tool: pmdParser(pattern: '**/target/pmd.xml')
+        recordIssues enabledForFailure: false, tool: spotBugs()
+        recordIssues enabledForFailure: false, tool: cpd(pattern: '**/target/cpd.xml')
+        recordIssues enabledForFailure: false, tool: pmdParser(pattern: '**/target/pmd.xml')
       }
     }
 
