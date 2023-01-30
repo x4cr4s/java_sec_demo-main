@@ -10,7 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         withMaven(maven : 'mvn-3.6.3') {
-          sh "mvn clean package jib:dockerBuild"
+          sh "mvn package"
         }
       }
     }
