@@ -273,7 +273,7 @@
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>3.14.0</version>
             </plugin>
-            <!-- Spotbugs report 
+            <!-- Spotbugs report -->
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
@@ -293,7 +293,7 @@
                     </plugins>
                 </configuration>
             </plugin>
--->
+
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
