@@ -167,7 +167,13 @@
                     <failOnError>false</failOnError>
                     <includeFilterFile>src/main/resources/spotbugs-security-include.xml</includeFilterFile>
                     <excludeFilterFile>src/main/resources/spotbugs-security-exclude.xml</excludeFilterFile>
-                    
+                    <plugins>
+                           <plugin>
+                                    <groupId>com.h3xstream.findsecbugs</groupId>
+                                    <artifactId>findsecbugs-plugin</artifactId>
+                                    <version>LATEST</version> <!-- Auto-update to the latest stable -->
+                           </plugin>
+                    </plugins>
                 </configuration>
                 <executions>
                     <execution>
@@ -285,7 +291,7 @@
             <!-- Spotbugs report 
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
-                <artifactId>spotbugs-maven-plugin</artifactId>
+                <artifactId>findbugs-maven-plugin</artifactId>
                 <version>4.2.0</version>
                 <configuration>
                     <effort>Max</effort>
